@@ -16,7 +16,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Tomat.Framework.Core.Configuration;
 using Tomat.Framework.Core.Services;
 using Tomat.Framework.Core.Services.Commands;
-using Tomat.Framework.Core.Utilities;
 using IntervalTimer = System.Timers.Timer;
 
 namespace Tomat.Framework.Core.Bot
@@ -37,7 +36,7 @@ namespace Tomat.Framework.Core.Bot
 
         public virtual DateTimeOffset StartTime { get; }
 
-        public virtual DiscordSocketClient DiscordClient => ServiceProvider.GetRequiredService<DiscordSocketClient>();
+        public virtual DiscordShardedClient DiscordClient => ServiceProvider.GetRequiredService<DiscordShardedClient>();
 
         public virtual IEnumerable<Assembly> Assemblies
         {
@@ -65,7 +64,7 @@ namespace Tomat.Framework.Core.Bot
 
             StartTime = DateTime.Now;
 
-            services.AddSingleton(new DiscordSocketClient(new DiscordSocketConfig
+            services.AddSingleton(new DiscordShardedClient(new DiscordSocketConfig
             {
                 LogLevel = LogSeverity.Verbose,
                 ExclusiveBulkDelete = true,
@@ -103,9 +102,9 @@ namespace Tomat.Framework.Core.Bot
             // Initialize *after* starting the bot.
             await ServiceRegistry.InitializeServicesAsync(this);
 
-            DiscordClient.Ready += async () =>
+            DiscordClient.ShardReady += async _ =>
             {
-                await RestartUtilities.CheckForRestart(this);
+                // await RestartUtilities.CheckForRestart(this);
 
                 new IntervalTimer(60 * 60 * 1000)
                 {

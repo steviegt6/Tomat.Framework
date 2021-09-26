@@ -12,7 +12,7 @@ namespace Tomat.Framework.Core.Services
     {
         IServiceProvider ServiceProvider { get; }
 
-        DiscordSocketClient Client { get; }
+        DiscordShardedClient Client { get; }
 
         DiscordBot Bot { get; }
     }

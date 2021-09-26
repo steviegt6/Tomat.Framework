@@ -20,13 +20,13 @@ namespace Tomat.Framework.Core.Services.Commands
     {
         public IServiceProvider ServiceProvider { get; }
 
-        public DiscordSocketClient Client { get; }
+        public DiscordShardedClient Client { get; }
 
         public DiscordBot Bot { get; }
 
         public CommandService Commands { get; protected set; }
 
-        public CommandReceiver(IServiceProvider serviceProvider, DiscordSocketClient client, DiscordBot bot)
+        public CommandReceiver(IServiceProvider serviceProvider, DiscordShardedClient client, DiscordBot bot)
         {
             ServiceProvider = serviceProvider;
             Client = client;
@@ -49,11 +49,16 @@ namespace Tomat.Framework.Core.Services.Commands
 
         private async Task ReceiveCommand(SocketMessage message)
         {
+            if (message.Channel is not SocketTextChannel tChannel)
+                return;
+
+            DiscordSocketClient shard = Client.GetShardFor(tChannel.Guild);
+
             if (message.ValidateMessageMention(
                 Bot,
                 out CommandUtilities.InvalidMessageReason invalidReason,
                 out int argPos,
-                Client
+                shard
             ))
             {
                 if (message is not SocketUserMessage socketMessage)
@@ -70,7 +75,7 @@ namespace Tomat.Framework.Core.Services.Commands
                     return;
                 }
 
-                await Commands.ExecuteAsync(new BotCommandContext(Bot, Client, socketMessage), argPos, null);
+                await Commands.ExecuteAsync(new BotCommandContext(Bot, shard, socketMessage), argPos, null);
             }
         }
 
