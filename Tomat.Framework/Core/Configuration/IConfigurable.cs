@@ -4,7 +4,7 @@
 
 using System.Threading.Tasks;
 
-namespace Tomat.TomatBot.Core.Configuration
+namespace Tomat.Framework.Core.Configuration
 {
     public interface IConfigurable
     {

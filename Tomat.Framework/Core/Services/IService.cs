@@ -4,9 +4,9 @@
 
 using System;
 using Discord.WebSocket;
-using Tomat.TomatBot.Core.Bot;
+using Tomat.Framework.Core.Bot;
 
-namespace Tomat.TomatBot.Core.Services
+namespace Tomat.Framework.Core.Services
 {
     public interface IService
     {

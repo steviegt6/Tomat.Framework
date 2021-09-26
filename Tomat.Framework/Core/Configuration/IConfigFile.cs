@@ -2,9 +2,9 @@
 // Copyright (C) 2021 Tomat and Contributors, MIT License
 #endregion
 
-using Tomat.TomatBot.Core.Bot;
+using Tomat.Framework.Core.Bot;
 
-namespace Tomat.TomatBot.Core.Configuration
+namespace Tomat.Framework.Core.Configuration
 {
     public interface IConfigFile : IConfigurable
     {

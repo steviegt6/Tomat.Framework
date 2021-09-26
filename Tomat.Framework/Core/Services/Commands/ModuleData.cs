@@ -4,7 +4,7 @@
 
 using System.Collections.Generic;
 
-namespace Tomat.TomatBot.Core.Services.Commands
+namespace Tomat.Framework.Core.Services.Commands
 {
     public readonly struct ModuleData
     {

@@ -4,7 +4,7 @@
 
 using System;
 
-namespace Tomat.TomatBot.Core.Services.Commands
+namespace Tomat.Framework.Core.Services.Commands
 {
     [AttributeUsage(AttributeTargets.Method, Inherited = false)]
     public sealed class ParametersAttribute : Attribute

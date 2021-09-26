@@ -8,11 +8,11 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Discord.Commands;
-using Tomat.TomatBot.Common.Logging;
-using Tomat.TomatBot.Core.Bot;
-using Tomat.TomatBot.Core.CommandContext;
+using Tomat.Framework.Common.Logging;
+using Tomat.Framework.Core.Bot;
+using Tomat.Framework.Core.CommandContext;
 
-namespace Tomat.TomatBot.Core.Services.Commands
+namespace Tomat.Framework.Core.Services.Commands
 {
     public class CommandRepository
     {

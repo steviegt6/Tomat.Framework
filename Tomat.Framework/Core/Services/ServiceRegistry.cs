@@ -5,10 +5,10 @@
 using System.Threading.Tasks;
 using Discord;
 using Microsoft.Extensions.DependencyInjection;
-using Tomat.TomatBot.Common.Logging;
-using Tomat.TomatBot.Core.Bot;
+using Tomat.Framework.Common.Logging;
+using Tomat.Framework.Core.Bot;
 
-namespace Tomat.TomatBot.Core.Services
+namespace Tomat.Framework.Core.Services
 {
     public static class ServiceRegistry
     {

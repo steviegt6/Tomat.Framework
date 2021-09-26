@@ -2,7 +2,7 @@
 // Copyright (C) 2021 Tomat and Contributors, MIT License
 #endregion
 
-namespace Tomat.TomatBot.Core.Services.Commands
+namespace Tomat.Framework.Core.Services.Commands
 {
     public readonly struct CommandData
     {

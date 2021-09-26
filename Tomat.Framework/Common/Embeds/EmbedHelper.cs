@@ -3,10 +3,9 @@
 #endregion
 
 using Discord;
-using Tomat.TomatBot.Common.Embeds;
-using Tomat.TomatBot.Core.Bot;
+using Tomat.Framework.Core.Bot;
 
-namespace TomatBot.Framework.Common.Embeds
+namespace Tomat.Framework.Common.Embeds
 {
     public static class EmbedHelper
     {

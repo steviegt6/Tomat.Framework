@@ -9,13 +9,12 @@ using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
-using Tomat.TomatBot.Common.Embeds;
-using Tomat.TomatBot.Core.Bot;
-using Tomat.TomatBot.Core.CommandContext;
-using Tomat.TomatBot.Core.Utilities;
-using TomatBot.Framework.Common.Embeds;
+using Tomat.Framework.Common.Embeds;
+using Tomat.Framework.Core.Bot;
+using Tomat.Framework.Core.CommandContext;
+using Tomat.Framework.Core.Utilities;
 
-namespace Tomat.TomatBot.Core.Services.Commands
+namespace Tomat.Framework.Core.Services.Commands
 {
     public class CommandReceiver : IInitializableService
     {

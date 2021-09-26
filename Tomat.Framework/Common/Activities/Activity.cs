@@ -4,7 +4,7 @@
 
 using Discord;
 
-namespace Tomat.TomatBot.Common.Activities
+namespace Tomat.Framework.Common.Activities
 {
     public class Activity : IActivity
     {

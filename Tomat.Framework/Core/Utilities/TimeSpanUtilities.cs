@@ -5,7 +5,7 @@
 using System;
 using System.Text;
 
-namespace Tomat.TomatBot.Core.Utilities
+namespace Tomat.Framework.Core.Utilities
 {
     public static class TimeSpanUtilities
     {

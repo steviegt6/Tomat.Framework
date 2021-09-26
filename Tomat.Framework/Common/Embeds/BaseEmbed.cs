@@ -4,9 +4,9 @@
 
 using System;
 using Discord;
-using Tomat.TomatBot.Core.Bot;
+using Tomat.Framework.Core.Bot;
 
-namespace Tomat.TomatBot.Common.Embeds
+namespace Tomat.Framework.Common.Embeds
 {
     public class BaseEmbed : EmbedBuilder
     {

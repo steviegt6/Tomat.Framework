@@ -4,7 +4,7 @@
 
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Tomat.TomatBot.Core.Services
+namespace Tomat.Framework.Core.Services
 {
     public interface IServicer
     {

@@ -5,9 +5,9 @@
 using System;
 using Discord.Commands;
 using Discord.WebSocket;
-using Tomat.TomatBot.Core.Bot;
+using Tomat.Framework.Core.Bot;
 
-namespace Tomat.TomatBot.Core.Utilities
+namespace Tomat.Framework.Core.Utilities
 {
     public static class CommandUtilities
     {

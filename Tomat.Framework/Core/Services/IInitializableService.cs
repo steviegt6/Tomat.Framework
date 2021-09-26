@@ -4,7 +4,7 @@
 
 using System.Threading.Tasks;
 
-namespace Tomat.TomatBot.Core.Services
+namespace Tomat.Framework.Core.Services
 {
     public interface IInitializableService : IService
     {

@@ -7,10 +7,10 @@ using System.IO;
 using System.Threading.Tasks;
 using Discord;
 using Discord.WebSocket;
-using Tomat.TomatBot.Common.Logging;
-using Tomat.TomatBot.Core.Bot;
+using Tomat.Framework.Common.Logging;
+using Tomat.Framework.Core.Bot;
 
-namespace Tomat.TomatBot.Core.Utilities
+namespace Tomat.Framework.Core.Utilities
 {
     public static class RestartUtilities
     {

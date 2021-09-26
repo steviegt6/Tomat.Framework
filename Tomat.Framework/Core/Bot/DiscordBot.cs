@@ -13,13 +13,13 @@ using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
-using Tomat.TomatBot.Core.Configuration;
-using Tomat.TomatBot.Core.Services;
-using Tomat.TomatBot.Core.Services.Commands;
-using Tomat.TomatBot.Core.Utilities;
+using Tomat.Framework.Core.Configuration;
+using Tomat.Framework.Core.Services;
+using Tomat.Framework.Core.Services.Commands;
+using Tomat.Framework.Core.Utilities;
 using IntervalTimer = System.Timers.Timer;
 
-namespace Tomat.TomatBot.Core.Bot
+namespace Tomat.Framework.Core.Bot
 {
     public abstract class DiscordBot : IDisposable, IServicer, IConfigurable
     {

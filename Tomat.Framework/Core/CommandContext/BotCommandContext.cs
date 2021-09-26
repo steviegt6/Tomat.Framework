@@ -4,9 +4,9 @@
 
 using Discord.Commands;
 using Discord.WebSocket;
-using Tomat.TomatBot.Core.Bot;
+using Tomat.Framework.Core.Bot;
 
-namespace Tomat.TomatBot.Core.CommandContext
+namespace Tomat.Framework.Core.CommandContext
 {
     public class BotCommandContext : SocketCommandContext
     {

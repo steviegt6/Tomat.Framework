@@ -5,7 +5,7 @@
 using System;
 using Discord;
 
-namespace Tomat.TomatBot.Common.Logging
+namespace Tomat.Framework.Common.Logging
 {
     public class LogBuilder
     {
